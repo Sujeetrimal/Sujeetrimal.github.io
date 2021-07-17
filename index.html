@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Personal Website</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/c8e4d183c2.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<!--navigation------------->
+		<nav>
+			<!--logo-->
+			<a href="#" class="logo">SUJEET RIMAL</a>
+			<!--menu-->
+			<ul>
+				<li><a href="#" class="active">HOME</a></li>
+				<li><a href="#about">ABOUT ME</a></li>
+				<li><a href="#skills">SKILLS</a></li>
+				<li><a href="#service">SERVICES</a></li>
+				<li><a href="#contact">CONTACT ME</a></li>
+			</ul>
+		</nav>
+
+		<div class="background"></div>
+
+		<!--text------------------->
+		<section>
+			<div class="banner">
+				<div class="text-container">
+					<h3>Hello,</h3>
+					<h2>I&#8217;M SUJEET</h2>
+					<p>DevOps Engineer <br />& Security Enthusiast.</p>
+
+					<div class="btn-group">
+						<button
+							onclick="location.href='https://www.linkedin.com/in/sujeetrimal/'"
+							class="hire-btn my-button"
+						>
+							Hire me
+						</button>
+						<a href="./documents/sujeet_cv.pdf" download="sujeet_cv"><button class="down-cv my-button">Download CV</button></a>
+					</div>
+				</div>
+
+				<!--model---------------------->
+				<div class="model-container">
+					<img alt="model" class="model" src="images/model.png" />
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="about-container">
+				<!--img-->
+				<img src="images/about-img.png" />
+				<!--about-me-text-->
+				<div class="about-text">
+					<div class="about-text__title">
+						<h2>About Me</h2>
+						<h3>DevOps Engineer</h3>
+					</div>
+					<div class="about-text__body">
+						<p>
+							Hello, My name is Sujeet Rimal. I am an experienced DevOps
+							Engineer with a demonstrated history of working in the computer
+							software industry with fluent knowledge of CI/CD pipelines,
+							Containerization, Container Orchestration.
+						</p>
+						<p>
+							I have Worked on various Cloud Providers like GCP, AWS, Azure,
+							Digital Ocean and have working Knowledge and experience coding on
+							Python Programming Language.I also have good Knowledge of Bash
+							Scripting and Automation.
+						</p>
+					</div>
+					<div class="about-text__button">
+						<button
+							class="my-button hire-btn"
+							onclick="location.href='https://www.linkedin.com/in/sujeetrimal/'"
+						>
+							Hire Me
+						</button>
+						<a href="./documents/sujeet_cv.pdf" download="sujeet_cv"><button class="down-cv my-button">Download CV</button></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--skills-container----------------------------->
+		<section id="skills">
+			<div class="skills">
+				<!--text-->
+				<h3>Some of my skills are listed below</h3>
+				<div class="gallery">
+					<div><img src="images/aws.png" /></div>
+					<div><img src="images/gcp.jpg" /></div>
+					<div><img src="images/apache.png" /></div>
+					<div><img src="images/ansible.png" /></div>
+					<div><img src="images/kubernetes.png" /></div>
+					<div><img src="images/nginx.png" /></div>
+					<div><img src="images/docker.png" /></div>
+					<div><img src="images/jenkins.png" /></div>
+				</div>
+			</div>
+		</section>
+		<!--services-container---------------------------->
+		<section id="service">
+			<div class="services">
+				<!--text-->
+				<div class="services-text">
+					<h2>Services</h2>
+					<p>
+						If you need any DevOps, Cloud, infrastructure based services that
+						could be anything from setting up CI/CD pipelines or architecturing
+						the infrastructure best suited for your organization or even if you
+						are in need of setting up highly scalable and highly available
+						infrastructure, We are always available and can deliver the project
+						in reasonable amount of time with the satisfying outcome. Feel free
+						to connect if you have any project in your mind.
+					</p>
+				</div>
+        <div class="services-image">
+          <img src="./images/services.png" alt="services" />
+        </div>
+        </section>
+        <section class="box-container">
+					<!--1------------->
+					<div class="box-1">
+						<span>1</span>
+						<h3>DevOps solutions</h3>
+						<p class="details">
+							From setting up CI/CD pipelines to monitoring your infrastructure,
+							we can provide every DevOps solutions with the right tools and
+							technologies best suited for your organization.
+						</p>
+					</div>
+					<!--2------------->
+					<div class="box-2">
+						<span>2</span>
+						<h3>Cloud consulting and services</h3>
+						<p class="details">
+							We can provide solutions and support for any cloud providers in
+							the market including Amazon Web Services (AWS), Google Cloud
+							Platform (GCP), Azure, Digital Ocean and so on.
+						</p>
+					</div>
+					<!--3------------->
+					<div class="box-3">
+						<span>3</span>
+						<h3>Infrastructure management</h3>
+						<p class="details">
+							We can design highly scalable and highly available infrastructure
+							for your organization with the best security practices. Even if
+							you need to migrate your infrastructure to the cloud with less
+							hasle, always remember us.
+						</p>
+					</div>
+				</div>
+		</section>
+		<!--if you have any project in your mind contact me-->
+		<section id="contact">
+			<div class="contact-me">
+				<p>Do You Have Any Project In Your Mind ?</p>
+			</div>
+			<!--footer--------------->
+			<footer>
+				<!--heading-->
+				<h2>Let's Connect On Social Media</h2>
+				<!--paragraph-->
+				<p>
+					If you have any IT related projects or need any cloud related
+					supports, or maybe need help in any DevOps related solutions for your
+					emerging organization, You can always contact me. I can even look at
+					your infrastructure and architect the best design and solutions for
+					your organization. I can deliver your project in time with satisfied
+					output.
+				</p>
+				<!--social-->
+				<div class="social-icons">
+					<a href="https://www.facebook.com/sujeetrimal"
+						><i class="fab fa-facebook-f"></i
+					></a>
+					<a href="https://www.linkedin.com/in/sujeetrimal/"
+						><i class="fab fa-linkedin"></i
+					></a>
+					<a href="mailto:sujeetrimal@gmail.com"
+						><i class="fab fa-google"></i
+					></a>
+					<a href="https://github.com/Sujeetrimal"
+						><i class="fab fa-github"></i
+					></a>
+				</div>
+				<!--copyright-->
+				<br />
+				<p class="copyright">Copyright &copy; to sujeet rimal</p>
+			</footer>
+			<!--social-attach-bar-->
+			<div class="social">
+				<a href="https://www.facebook.com/sujeetrimal"
+					><i class="fab fa-facebook-f"></i
+				></a>
+				<a href="https://www.linkedin.com/in/sujeetrimal/"
+					><i class="fab fa-linkedin"></i
+				></a>
+				<a href="mailto:sujeetrimal@gmail.com"><i class="fab fa-google"></i></a>
+				<a href="https://github.com/Sujeetrimal"
+					><i class="fab fa-github"></i
+				></a>
+			</div>
+		</section>
+	</body>
+</html>
