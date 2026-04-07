@@ -7,6 +7,7 @@
 <meta name="description" content="Sujeet Rimal is a DevOps Engineer focused on AWS, Kubernetes, Terraform, Linux, and CI/CD. I build secure, scalable cloud infrastructure and fast delivery pipelines for product teams.">
 <meta name="keywords" content="DevOps Engineer, Cloud Engineer, AWS, Kubernetes, Terraform, CI/CD, Docker, Linux, Platform Engineering, Nepal">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Sujeet Rimal">
 <link rel="canonical" href="https://sujeetrimal.com.np/">
 <meta property="og:type" content="website">
@@ -14,9 +15,13 @@
 <meta property="og:description" content="DevOps and cloud specialist building reliable AWS and Kubernetes platforms with fast CI/CD.">
 <meta property="og:url" content="https://sujeetrimal.com.np/">
 <meta property="og:site_name" content="Sujeet Rimal Portfolio">
+<meta property="og:image" content="https://sujeetrimal.com.np/og-image.jpg">
+<meta property="og:image:alt" content="Sujeet Rimal DevOps Engineer portfolio website preview">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sujeet Rimal | DevOps Engineer">
 <meta name="twitter:description" content="Cloud, Kubernetes, Terraform, and CI/CD solutions for modern engineering teams.">
+<meta name="twitter:image" content="https://sujeetrimal.com.np/og-image.jpg">
+<meta name="theme-color" content="#030712">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -34,6 +39,9 @@
   --ok:#22c55e;
   --warn:#f59e0b;
   --max:1140px;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  --border:#1e293b;
+  --border-hi:#334155;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -149,7 +157,7 @@ h2{font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:14px}
 .terminal{
   font-family:var(--font-mono);font-size:.8rem;
   color:#7dd3fc;padding:20px;
-  min-height:290px;max-height:290px;overflow-y:auto;
+  min-height:260px;max-height:290px;overflow-y:auto;
   line-height:1.7;
 }
 .terminal::-webkit-scrollbar{width:4px}
@@ -204,13 +212,45 @@ footer{
   color:var(--muted);text-align:center;
 }
 @media (max-width:980px){
-  .hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
+  .hero,.hero-inner{padding-top:64px}
+  .hero-inner,.hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
+  .hero-inner{gap:26px}
+  .terminal-card{max-width:100%}
   .kpis{grid-template-columns:repeat(3,minmax(95px,1fr))}
 }
 @media (max-width:680px){
-  .nav{gap:10px}
+  .container{padding:0 14px}
+  header{position:static}
+  .nav-wrap{
+    min-height:auto;
+    padding:10px 0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .nav{gap:10px;justify-content:flex-start}
+  .nav a{font-size:.95rem}
+  .eyebrow{font-size:.72rem;letter-spacing:.11em;padding:6px 10px}
+  .cta-row{gap:10px}
+  .btn{width:100%}
   .kpis{grid-template-columns:1fr 1fr}
+  .kpi strong{font-size:1.2rem}
+  .term-bar{padding:10px 12px}
+  .term-title{font-size:.68rem;max-width:65%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .terminal{
+    font-size:.74rem;
+    line-height:1.55;
+    padding:14px;
+    min-height:220px;
+    max-height:240px;
+  }
+  .pill{font-size:.78rem;padding:6px 9px}
   section{padding:64px 0}
+}
+@media (max-width:420px){
+  .kpis{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(1.65rem,9vw,2.1rem)}
+  .terminal{min-height:200px;max-height:220px}
 }
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto}
@@ -222,11 +262,80 @@ footer{
 {
   "@context":"https://schema.org",
   "@type":"Person",
+  "@id":"https://sujeetrimal.com.np/#person",
   "name":"Sujeet Rimal",
   "url":"https://sujeetrimal.com.np/",
   "jobTitle":"DevOps Engineer",
+  "description":"DevOps Engineer focused on AWS, Kubernetes, Terraform, Linux, and CI/CD.",
+  "worksFor":{
+    "@type":"Organization",
+    "name":"Independent Consultant"
+  },
   "knowsAbout":["DevOps","Cloud Engineering","AWS","Kubernetes","Terraform","CI/CD","Docker","Linux"],
   "sameAs":[]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://sujeetrimal.com.np/#website",
+  "url":"https://sujeetrimal.com.np/",
+  "name":"Sujeet Rimal Portfolio",
+  "inLanguage":"en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "@id":"https://sujeetrimal.com.np/#service",
+  "name":"Sujeet Rimal DevOps Consulting",
+  "url":"https://sujeetrimal.com.np/",
+  "description":"DevOps, cloud architecture, Kubernetes platform setup, and CI/CD engineering services.",
+  "areaServed":"Worldwide",
+  "serviceType":[
+    "DevOps Consulting",
+    "Cloud Architecture",
+    "Kubernetes Platform Engineering",
+    "CI/CD Pipeline Engineering"
+  ],
+  "provider":{
+    "@id":"https://sujeetrimal.com.np/#person"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "@id":"https://sujeetrimal.com.np/#faq",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Do you work with early-stage startups and enterprise teams?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. I adapt architecture and delivery patterns to your stage, team maturity, and compliance needs."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can you optimize our cloud cost while improving reliability?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. I usually combine cost optimization with observability and autoscaling changes so savings do not hurt performance."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Do you support ongoing DevOps consulting after project delivery?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. I can provide retained support for roadmap planning, incident reviews, and continuous improvement."
+      }
+    }
+  ]
 }
 </script>
 
