@@ -1,214 +1,554 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Sujeet Rimal</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script
-			src="https://kit.fontawesome.com/c8e4d183c2.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sujeet Rimal | DevOps Engineer | AWS, Kubernetes, CI/CD</title>
+<meta name="description" content="Sujeet Rimal is a DevOps Engineer focused on AWS, Kubernetes, Terraform, Linux, and CI/CD. I build secure, scalable cloud infrastructure and fast delivery pipelines for product teams.">
+<meta name="keywords" content="DevOps Engineer, Cloud Engineer, AWS, Kubernetes, Terraform, CI/CD, Docker, Linux, Platform Engineering, Nepal">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Sujeet Rimal">
+<link rel="canonical" href="https://sujeetrimal.com.np/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sujeet Rimal | DevOps Engineer">
+<meta property="og:description" content="DevOps and cloud specialist building reliable AWS and Kubernetes platforms with fast CI/CD.">
+<meta property="og:url" content="https://sujeetrimal.com.np/">
+<meta property="og:site_name" content="Sujeet Rimal Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sujeet Rimal | DevOps Engineer">
+<meta name="twitter:description" content="Cloud, Kubernetes, Terraform, and CI/CD solutions for modern engineering teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-	<body>
-		<!--navigation------------->
-		<nav>
-			<!--logo-->
-			<a href="#" class="logo">SUJEET RIMAL</a>
-			<!--menu-->
-			<ul>
-				<li><a href="#" class="active">HOME</a></li>
-				<li><a href="#about">ABOUT ME</a></li>
-				<li><a href="#skills">SKILLS</a></li>
-				<li><a href="#service">SERVICES</a></li>
-				<li><a href="#contact">CONTACT ME</a></li>
-			</ul>
-		</nav>
+<style>
+:root{
+  --bg:#030712;
+  --panel:#0b1226cc;
+  --panel-solid:#111a30;
+  --txt:#e2e8f0;
+  --muted:#94a3b8;
+  --pri:#38bdf8;
+  --sec:#818cf8;
+  --ring:#67e8f9;
+  --ok:#22c55e;
+  --warn:#f59e0b;
+  --max:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:radial-gradient(circle at 80% -10%,#1d4ed833 0,transparent 50%),var(--bg);
+  color:var(--txt);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+canvas{position:fixed;inset:0;z-index:-3}
+.grid-bg{
+  position:fixed;inset:0;z-index:-4;
+  background-image:linear-gradient(rgba(56,189,248,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.06) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{
+  position:sticky;top:0;z-index:20;
+  background:#020617bf;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #1e293b;
+}
+.nav-wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:72px;
+}
+.brand{font-weight:800;letter-spacing:.2px}
+.brand span{color:var(--pri)}
+.nav{
+  display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;
+}
+.nav a{color:var(--muted);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--pri)}
+section{padding:80px 0}
+h1,h2,h3{line-height:1.2}
+h1{
+  font-size:clamp(2rem,5.3vw,4.1rem);
+  background:linear-gradient(92deg,var(--pri),#93c5fd,var(--sec));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+h2{font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:14px}
+.section-head p{color:var(--muted);max-width:700px}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);
+  font-size:.78rem;font-weight:600;
+  color:var(--pri);
+  letter-spacing:.16em;text-transform:uppercase;
+  background:#00d4ff12;
+  border:1px solid #00d4ff28;
+  padding:6px 14px;border-radius:999px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:'';display:block;width:6px;height:6px;
+  border-radius:50%;background:var(--pri);
+  animation:pulse-dot 1.5s ease-in-out infinite;
+}
+.hero{padding-top:90px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:28px;
+  align-items:center;
+}
+.hero p{color:var(--muted);max-width:660px;margin-top:16px}
+.typing{font-family:"JetBrains Mono",monospace;color:var(--ring);margin-top:14px;min-height:26px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  border:1px solid #334155;
+  background:#0f172a;
+  color:var(--txt);
+  text-decoration:none;
+  padding:12px 18px;border-radius:12px;
+  display:inline-flex;align-items:center;justify-content:center;font-weight:600;
+}
+.btn:hover{border-color:var(--pri);color:var(--pri)}
+.btn-primary{
+  background:linear-gradient(105deg,var(--pri),var(--sec));
+  color:#020617;border:none;
+}
+.kpis{
+  margin-top:34px;
+  display:grid;gap:12px;
+  grid-template-columns:repeat(3,minmax(120px,1fr));
+}
+.kpi{
+  border:1px solid #1e293b;background:var(--panel);
+  border-radius:14px;padding:14px;text-align:center;
+}
+.kpi strong{display:block;font-size:1.45rem;color:var(--ring)}
+.terminal-card{
+  background:#050c1a;
+  border:1px solid var(--border-hi);border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 60px #00000088,0 0 0 1px #00d4ff14;
+}
+.term-bar{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 18px;border-bottom:1px solid var(--border);
+  background:#030810;
+}
+.dot{width:11px;height:11px;border-radius:50%}
+.dot.r{background:#ef4444}.dot.y{background:#f59e0b}.dot.g{background:#22c55e}
+.term-title{font-family:var(--font-mono);font-size:.75rem;color:var(--muted);margin-left:auto}
+.terminal{
+  font-family:var(--font-mono);font-size:.8rem;
+  color:#7dd3fc;padding:20px;
+  min-height:290px;max-height:290px;overflow-y:auto;
+  line-height:1.7;
+}
+.terminal::-webkit-scrollbar{width:4px}
+.terminal::-webkit-scrollbar-track{background:transparent}
+.terminal::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:4px}
+.t-cmd{color:#a5f3fc}.t-ok{color:#22c55e}.t-info{color:#818cf8}.t-warn{color:#f59e0b}
+.dot{width:10px;height:10px;border-radius:50%}
+.red{background:#ef4444}.yellow{background:#f59e0b}.green{background:#22c55e}
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:20px;transition:transform .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-4px);border-color:#38bdf866}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted)}
+.pill{
+  display:inline-block;padding:7px 11px;border:1px solid #334155;
+  border-radius:999px;font-size:.84rem;color:#cbd5e1;background:#0f172a;
+}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.timeline{display:grid;gap:12px}
+.step{
+  padding:14px 16px;border-left:3px solid #334155;background:#0b1226;
+  border-radius:10px;
+}
+.step strong{color:var(--ring)}
+.quote{font-style:italic;color:#dbeafe}
+.contact{
+  text-align:center;
+  background:linear-gradient(145deg,#082f49b3,#1e1b4bb3);
+  border:1px solid #334155;
+  border-radius:20px;
+  padding:34px 24px;
+}
+.contact p{max-width:740px;margin:10px auto 0;color:#cbd5e1}
+.faq details{
+  border:1px solid #1f2937;border-radius:12px;padding:12px 14px;background:#0b1226;
+}
+.avail{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;font-weight:600;font-family:var(--font-mono);
+  color:var(--ok);background:#18e07a12;border:1px solid #18e07a28;
+  padding:5px 12px;border-radius:999px;margin-bottom:16px;
+}
+.avail-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:pulse-dot 1.4s infinite}
+.faq details+details{margin-top:12px}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin-top:10px;color:var(--muted)}
+footer{
+  border-top:1px solid #1e293b;
+  margin-top:72px;padding:26px 0;
+  color:var(--muted);text-align:center;
+}
+@media (max-width:980px){
+  .hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(3,minmax(95px,1fr))}
+}
+@media (max-width:680px){
+  .nav{gap:10px}
+  .kpis{grid-template-columns:1fr 1fr}
+  section{padding:64px 0}
+}
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior:auto}
+  .card{transition:none}
+}
+</style>
 
-		<div class="background"></div>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Sujeet Rimal",
+  "url":"https://sujeetrimal.com.np/",
+  "jobTitle":"DevOps Engineer",
+  "knowsAbout":["DevOps","Cloud Engineering","AWS","Kubernetes","Terraform","CI/CD","Docker","Linux"],
+  "sameAs":[]
+}
+</script>
 
-		<!--text------------------->
-		<section>
-			<div class="banner">
-				<div class="text-container">
-					<h3>Hello,</h3>
-					<h2>I&#8217;M SUJEET</h2>
-					<p>DevOps Engineer <br />& Security Enthusiast.</p>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
 
-					<div class="btn-group">
-						<button
-							onclick="location.href='https://www.linkedin.com/in/sujeetrimal/'"
-							class="hire-btn my-button"
-						>
-							Hire me
-						</button>
-					</div>
-				</div>
+<header>
+  <div class="container nav-wrap">
+    <div class="brand">Sujeet<span>@devops</span></div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-				<!--model---------------------->
-				<div class="model-container">
-					<img alt="model" class="model" src="images/model.png" />
-				</div>
-			</div>
-		</section>
-
-		<section id="about">
-			<div class="about-container">
-				<!--img-->
-				<img src="images/about-img.png" />
-				<!--about-me-text-->
-				<div class="about-text">
-					<div class="about-text__title">
-						<h2>About Me</h2>
-						<h3>DevOps Engineer</h3>
-					</div>
-					<div class="about-text__body">
-						<p>
-							Hello, My name is Sujeet Rimal. I am an experienced DevOps
-							Engineer with a demonstrated history of working in the computer
-							software industry with fluent knowledge of CI/CD pipelines,
-							Containerization, Container Orchestration.
-						</p>
-						<p>
-							I have Worked on various Cloud Providers like GCP, AWS, Azure,
-							Digital Ocean and have working Knowledge and experience coding on
-							Python Programming Language.I also have good Knowledge of Bash
-							Scripting and Automation.
-						</p>
-					</div>
-					<div class="about-text__button">
-						<button
-							class="my-button hire-btn"
-							onclick="location.href='https://www.linkedin.com/in/sujeetrimal/' target="_blank""
-						>
-							Hire Me
-						</button>
-						<a href="./documents/sujeet_cv.pdf" download="sujeet_cv"><button class="down-cv my-button">Download CV</button></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--skills-container----------------------------->
-		<section id="skills">
-			<div class="skills">
-				<!--text-->
-				<h3>Some of my skills are listed below</h3>
-				<div class="gallery">
-					<div><img src="images/aws.png" /></div>
-					<div><img src="images/gcp.jpg" /></div>
-					<div><img src="images/apache.png" /></div>
-					<div><img src="images/ansible.png" /></div>
-					<div><img src="images/kubernetes.png" /></div>
-					<div><img src="images/nginx.png" /></div>
-					<div><img src="images/docker.png" /></div>
-					<div><img src="images/jenkins.png" /></div>
-				</div>
-			</div>
-		</section>
-		<!--services-container---------------------------->
-		<section id="service">
-			<div class="services">
-				<!--text-->
-				<div class="services-text">
-					<h2>Services</h2>
-					<p>
-						If you need any DevOps, Cloud, infrastructure based services that
-						could be anything from setting up CI/CD pipelines or architecturing
-						the infrastructure best suited for your organization or even if you
-						are in need of setting up highly scalable and highly available
-						infrastructure, We are always available and can deliver the project
-						in reasonable amount of time with the satisfying outcome. Feel free
-						to connect if you have any project in your mind.
-					</p>
-				</div>
-        <div class="services-image">
-          <img src="./images/services.png" alt="services" />
+<main>
+  <section class="hero" aria-label="Introduction">
+    <div class="container hero-inner">
+      <div>
+        <div class="avail"><span class="avail-dot"></span>Open to Projects &amp; Consulting</div>
+        <div class="eyebrow">Cloud • DevOps • Platform Engineering • SRE</div>
+        <h1>I build resilient cloud platforms that ship faster and fail less.</h1>
+        <p>
+        Senior DevOps &amp; Platform Engineer helping startups and scaling teams design production-grade
+        AWS &amp; Kubernetes infrastructure, automate delivery with robust CI/CD, and achieve
+        observability-first reliability — without the chaos.
+        </p>
+        <div class="typing" id="typing" aria-live="polite"></div>
+        <div class="cta-row">
+          <a href="mailto:sujeetrimal@gmail.com?subject=Project%20Inquiry%20-%20DevOps%20Support" class="btn btn-primary">Book a Project Call</a>
+          <a href="#projects" class="btn">View Case Studies</a>
         </div>
-        </section>
-        <section class="box-container">
-					<!--1------------->
-					<div class="box-1">
-						<span>1</span>
-						<h3>DevOps solutions</h3>
-						<p class="details">
-							From setting up CI/CD pipelines to monitoring your infrastructure,
-							we can provide every DevOps solutions with the right tools and
-							technologies best suited for your organization.
-						</p>
-					</div>
-					<!--2------------->
-					<div class="box-2">
-						<span>2</span>
-						<h3>Cloud consulting and services</h3>
-						<p class="details">
-							We can provide solutions and support for any cloud providers in
-							the market including Amazon Web Services (AWS), Google Cloud
-							Platform (GCP), Azure, Digital Ocean and so on.
-						</p>
-					</div>
-					<!--3------------->
-					<div class="box-3">
-						<span>3</span>
-						<h3>Infrastructure management</h3>
-						<p class="details">
-							We can design highly scalable and highly available infrastructure
-							for your organization with the best security practices. Even if
-							you need to migrate your infrastructure to the cloud with less
-							hasle, always remember us.
-						</p>
-					</div>
-				</div>
-		</section>
-		<!--if you have any project in your mind contact me-->
-		<section id="contact">
-			<div class="contact-me">
-				<p>Do You Have Any Project In Your Mind ?</p>
-			</div>
-			<!--footer--------------->
-			<footer>
-				<!--heading-->
-				<h2>Let's Connect On Social Media</h2>
-				<!--paragraph-->
-				<p>
-					If you have any IT related projects or need any cloud related
-					supports, or maybe need help in any DevOps related solutions for your
-					emerging organization, You can always contact me. I can even look at
-					your infrastructure and architect the best design and solutions for
-					your organization. I can deliver your project in time with satisfied
-					output.
-				</p>
-				<!--social-->
-				<div class="social-icons">
-					<a href="https://www.facebook.com/sujeetrimal" target="_blank"
-						><i class="fab fa-facebook-f"></i
-					></a>
-					<a href="https://www.linkedin.com/in/sujeetrimal/" target="_blank"
-						><i class="fab fa-linkedin"></i
-					></a>
-					<a href="mailto:sujeetrimal@gmail.com" target="_blank"
-						><i class="fab fa-google"></i
-					></a>
-					<a href="https://github.com/Sujeetrimal" target="_blank"
-						><i class="fab fa-github"></i
-					></a>
-				</div>
-				<!--copyright-->
-				<br />
-				<p class="copyright">Copyright &copy; to sujeet rimal</p>
-			</footer>
-			<!--social-attach-bar-->
-			<div class="social">
-				<a href="https://www.facebook.com/sujeetrimal" target="_blank"
-					><i class="fab fa-facebook-f"></i
-				></a>
-				<a href="https://www.linkedin.com/in/sujeetrimal/" target="_blank"
-					><i class="fab fa-linkedin"></i
-				></a>
-				<a href="mailto:sujeetrimal@gmail.com"><i class="fab fa-google"></i></a>
-				<a href="https://github.com/Sujeetrimal" target="_blank"
-					><i class="fab fa-github"></i
-				></a>
-			</div>
-		</section>
-	</body>
+        <div class="kpis">
+          <div class="kpi"><strong>99.95%</strong>Uptime</div>
+          <div class="kpi"><strong>3x</strong>Faster Releases</div>
+          <div class="kpi"><strong>40%</strong>Cloud Cost Savings</div>
+        </div>
+      </div>
+      <aside aria-label="Live terminal demo">
+      <div class="terminal-card">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="term-title">sujeet@devops ~ production</span>
+        </div>
+        <div class="terminal" id="terminal" role="log" aria-label="Terminal output"></div>
+      </div>
+    </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About me</div>
+        <h2>DevOps Engineer focused on measurable business outcomes</h2>
+        <p>
+          I combine infrastructure automation, secure cloud architecture, and pragmatic engineering practices to reduce release risk and increase delivery velocity. I work across Linux, AWS, containers, and modern CI/CD stacks to keep your team focused on shipping product.
+        </p>
+      </div>
+      <div class="grid grid-3" style="margin-top:24px">
+        <article class="card">
+          <h3>Reliability First</h3>
+          <p>Production systems with proactive monitoring, alerting, and incident response playbooks.</p>
+        </article>
+        <article class="card">
+          <h3>Security by Design</h3>
+          <p>Least-privilege IAM, policy-driven infrastructure, secrets management, and audit-ready pipelines.</p>
+        </article>
+        <article class="card">
+          <h3>Speed Without Chaos</h3>
+          <p>Automated testing and deployment guardrails that speed up releases while preserving stability.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Services</div>
+        <h2>How I can help your team</h2>
+      </div>
+      <div class="grid grid-3" style="margin-top:22px">
+        <article class="card">
+          <h3>AWS Cloud Architecture</h3>
+          <p>Design scalable VPCs, compute, storage, and networking patterns for reliable production workloads.</p>
+        </article>
+        <article class="card">
+          <h3>Kubernetes Platform Setup</h3>
+          <p>Build and operate secure Kubernetes clusters with autoscaling, ingress, and high-availability setup.</p>
+        </article>
+        <article class="card">
+          <h3>CI/CD Pipeline Engineering</h3>
+          <p>Implement end-to-end pipelines with testing, security checks, and automated deployment strategies.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Case studies</div>
+        <h2>Selected DevOps and cloud projects</h2>
+      </div>
+      <div class="grid grid-3" style="margin-top:22px">
+        <article class="card">
+          <h3>Terraform Landing Zone on AWS</h3>
+          <p>Provisioned multi-environment infrastructure with reusable modules, reducing setup time from days to under an hour.</p>
+        </article>
+        <article class="card">
+          <h3>Kubernetes Migration</h3>
+          <p>Migrated containerized workloads from unmanaged VMs to Kubernetes with improved scaling and lower incident frequency.</p>
+        </article>
+        <article class="card">
+          <h3>Pipeline and Release Revamp</h3>
+          <p>Redesigned CI/CD flow with parallel jobs, caching, and deployment gates to reduce release cycle time significantly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Tech stack</div>
+        <h2>Tools and platforms I work with</h2>
+      </div>
+      <div class="stack" style="margin-top:20px">
+        <span class="pill">AWS</span><span class="pill">Kubernetes</span><span class="pill">Terraform</span>
+        <span class="pill">Docker</span><span class="pill">Helm</span><span class="pill">GitHub Actions</span>
+        <span class="pill">Jenkins</span><span class="pill">Linux</span><span class="pill">Nginx</span>
+        <span class="pill">Prometheus</span><span class="pill">Grafana</span><span class="pill">Cloudflare</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-2">
+      <article>
+        <div class="section-head">
+          <div class="eyebrow">Process</div>
+          <h2>How I deliver projects</h2>
+        </div>
+        <div class="timeline" style="margin-top:16px">
+          <div class="step"><strong>1. Infrastructure Audit:</strong> identify bottlenecks, risks, and high-impact quick wins.</div>
+          <div class="step"><strong>2. Architecture Plan:</strong> design target cloud and deployment architecture aligned with business goals.</div>
+          <div class="step"><strong>3. Implementation:</strong> automate infra and pipelines with infrastructure as code and clear documentation.</div>
+          <div class="step"><strong>4. Handover & Optimization:</strong> train your team, monitor outcomes, and continuously improve reliability and costs.</div>
+        </div>
+      </article>
+      <article>
+        <div class="section-head">
+          <div class="eyebrow">What teams say</div>
+          <h2>Impact that stakeholders feel</h2>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <div class="card">
+            <p class="quote">"Our deployments went from stressful to predictable. The platform now supports product launches without downtime."</p>
+            <p>- Engineering Lead, SaaS Product</p>
+          </div>
+          <div class="card">
+            <p class="quote">"Security, speed, and stability improved together. The team gained confidence in every release."</p>
+            <p>- CTO, Fintech Startup</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq" style="margin-top:16px">
+        <details>
+          <summary>Do you work with early-stage startups and enterprise teams?</summary>
+          <p>Yes. I adapt architecture and delivery patterns to your stage, team maturity, and compliance needs.</p>
+        </details>
+        <details>
+          <summary>Can you optimize our cloud cost while improving reliability?</summary>
+          <p>Yes. I usually combine cost optimization with observability and autoscaling changes so savings do not hurt performance.</p>
+        </details>
+        <details>
+          <summary>Do you support ongoing DevOps consulting after project delivery?</summary>
+          <p>Yes. I can provide retained support for roadmap planning, incident reviews, and continuous improvement.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div class="eyebrow">Let's build something exceptional</div>
+        <h2>Need a DevOps engineer for your next cloud project?</h2>
+        <p>
+          Share your current setup and goals. I will help you plan and implement a practical roadmap to improve speed, uptime, and scalability.
+        </p>
+        <div class="cta-row" style="justify-content:center">
+          <a href="mailto:sujeetrimal@gmail.com?subject=Let's%20Work%20Together%20-%20DevOps%20Project" class="btn btn-primary">Start a Conversation</a>
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Sujeet Rimal • DevOps Engineer • AWS • Kubernetes • CI/CD</div>
+</footer>
+
+<script>
+/* ── TYPING EFFECT ── */
+const roles=[
+  "AWS & Kubernetes Specialist",
+  "CI/CD Automation Engineer",
+  "Cloud Platform Architect",
+  "Terraform & IaC Expert",
+  "Platform Reliability Engineer",
+  "DevSecOps Practitioner"
+];
+let rI=0,cI=0,del=false;
+const el=document.getElementById("typing");
+(function tick(){
+  const t=roles[rI];
+  el.textContent=t.slice(0,cI);
+  if(!del&&cI<t.length)cI++;
+  else if(del&&cI>0)cI--;
+  else{del=!del;if(!del)rI=(rI+1)%roles.length;}
+  setTimeout(tick,del?38:72);
+})();
+
+const logs=[
+  {t:"cmd",v:"$ terraform plan --out=prod.tfplan"},
+  {t:"info",v:"Refreshing state... done."},
+  {t:"ok",v:"Plan: 14 to add, 2 to change, 0 to destroy."},
+  {t:"cmd",v:"$ terraform apply prod.tfplan"},
+  {t:"ok",v:"Apply complete! Resources: 16 added. ✓"},
+  {t:"cmd",v:"$ kubectl get nodes -o wide"},
+  {t:"ok",v:"node-1  Ready  <none>  m5.xlarge  v1.29"},
+  {t:"ok",v:"node-2  Ready  <none>  m5.xlarge  v1.29"},
+  {t:"cmd",v:"$ kubectl get pods -n production"},
+  {t:"ok",v:"api-7dc58-k6n5j     Running  1/1"},
+  {t:"ok",v:"worker-6c65f-rj2tt  Running  1/1"},
+  {t:"ok",v:"cache-84bd9-lx7km   Running  1/1"},
+  {t:"cmd",v:"$ gh workflow run deploy.yml --ref main"},
+  {t:"info",v:"Triggered: build → test → scan → deploy"},
+  {t:"ok",v:"Release #212 deployed. Zero downtime. ✓"},
+  {t:"cmd",v:"$ curl -s metrics.prod/health | jq .uptime"},
+  {t:"ok",v:'"99.97%" — SLO: ✓ all green'}
+];
+const term=document.getElementById("terminal");
+let lI=0;
+(function stream(){
+  if(lI>=logs.length){lI=0;term.innerHTML='';setTimeout(stream,2400);return;}
+  const d=document.createElement("div");
+  d.className="t-"+logs[lI].t;
+  d.textContent=logs[lI].v;
+  term.appendChild(d);
+  term.scrollTop=term.scrollHeight;
+  lI++;setTimeout(stream,lI===1?200:540);
+})();
+
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
+const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let points=[];
+function fitCanvas(){
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+}
+function initPoints(){
+  const count=Math.max(40,Math.floor(window.innerWidth/24));
+  points=Array.from({length:count},()=>({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    vx:(Math.random()-.5)*0.6,
+    vy:(Math.random()-.5)*0.6
+  }));
+}
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let i=0;i<points.length;i++){
+    const p=points[i];
+    p.x+=p.vx;
+    p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width)p.vx*=-1;
+    if(p.y<0||p.y>canvas.height)p.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,1.8,0,Math.PI*2);
+    ctx.fillStyle="#38bdf8";
+    ctx.fill();
+    for(let j=i+1;j<points.length;j++){
+      const q=points[j];
+      const dist=Math.hypot(p.x-q.x,p.y-q.y);
+      if(dist<92){
+        ctx.strokeStyle=`rgba(103,232,249,${1-dist/92})`;
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(q.x,q.y);
+        ctx.stroke();
+      }
+    }
+  }
+  if(!reducedMotion)requestAnimationFrame(animate);
+}
+fitCanvas();
+initPoints();
+if(!reducedMotion){animate();}
+window.addEventListener("resize",()=>{
+  fitCanvas();
+  initPoints();
+});
+</script>
+</body>
 </html>
