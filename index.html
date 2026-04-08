@@ -15,256 +15,23 @@
 <meta property="og:description" content="DevOps and cloud specialist building reliable AWS and Kubernetes platforms with fast CI/CD.">
 <meta property="og:url" content="https://sujeetrimal.com.np/">
 <meta property="og:site_name" content="Sujeet Rimal Portfolio">
-<meta property="og:image" content="https://sujeetrimal.com.np/og-image.png">
-<meta property="og:image:secure_url" content="https://sujeetrimal.com.np/og-image.png">
+<meta property="og:image" content="https://sujeetrimal.com.np/assets/images/og-image.png">
+<meta property="og:image:secure_url" content="https://sujeetrimal.com.np/assets/images/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sujeet Rimal DevOps Engineer portfolio website preview">
-<meta property="og:image" content="https://sujeetrimal.com.np/og-image.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sujeet Rimal | DevOps Engineer">
 <meta name="twitter:description" content="Cloud, Kubernetes, Terraform, and CI/CD solutions for modern engineering teams.">
-<meta name="twitter:image" content="https://sujeetrimal.com.np/og-image.png">
+<meta name="twitter:image" content="https://sujeetrimal.com.np/assets/images/og-image.png">
 <meta name="twitter:image:alt" content="Sujeet Rimal DevOps engineer website preview image">
 <meta name="theme-color" content="#030712">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#030712;
-  --panel:#0b1226cc;
-  --panel-solid:#111a30;
-  --txt:#e2e8f0;
-  --muted:#94a3b8;
-  --pri:#38bdf8;
-  --sec:#818cf8;
-  --ring:#67e8f9;
-  --ok:#22c55e;
-  --warn:#f59e0b;
-  --max:1140px;
-  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-  --border:#1e293b;
-  --border-hi:#334155;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:Inter,system-ui,sans-serif;
-  background:radial-gradient(circle at 80% -10%,#1d4ed833 0,transparent 50%),var(--bg);
-  color:var(--txt);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-canvas{position:fixed;inset:0;z-index:-3}
-.grid-bg{
-  position:fixed;inset:0;z-index:-4;
-  background-image:linear-gradient(rgba(56,189,248,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.06) 1px,transparent 1px);
-  background-size:42px 42px;
-}
-.container{max-width:var(--max);margin:0 auto;padding:0 20px}
-header{
-  position:sticky;top:0;z-index:20;
-  background:#020617bf;
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #1e293b;
-}
-.nav-wrap{
-  display:flex;align-items:center;justify-content:space-between;
-  min-height:72px;
-}
-.brand{font-weight:800;letter-spacing:.2px}
-.brand span{color:var(--pri)}
-.nav{
-  display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;
-}
-.nav a{color:var(--muted);text-decoration:none;font-weight:500}
-.nav a:hover{color:var(--pri)}
-section{padding:80px 0}
-h1,h2,h3{line-height:1.2}
-h1{
-  font-size:clamp(2rem,5.3vw,4.1rem);
-  background:linear-gradient(92deg,var(--pri),#93c5fd,var(--sec));
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
-}
-h2{font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:14px}
-.section-head p{color:var(--muted);max-width:700px}
-.hero-inner{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:40px;align-items:center;
-}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--font-mono);
-  font-size:.78rem;font-weight:600;
-  color:var(--pri);
-  letter-spacing:.16em;text-transform:uppercase;
-  background:#00d4ff12;
-  border:1px solid #00d4ff28;
-  padding:6px 14px;border-radius:999px;
-  margin-bottom:18px;
-}
-.eyebrow::before{
-  content:'';display:block;width:6px;height:6px;
-  border-radius:50%;background:var(--pri);
-  animation:pulse-dot 1.5s ease-in-out infinite;
-}
-.hero{padding-top:90px}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:28px;
-  align-items:center;
-}
-.hero p{color:var(--muted);max-width:660px;margin-top:16px}
-.typing{font-family:"JetBrains Mono",monospace;color:var(--ring);margin-top:14px;min-height:26px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{
-  border:1px solid #334155;
-  background:#0f172a;
-  color:var(--txt);
-  text-decoration:none;
-  padding:12px 18px;border-radius:12px;
-  display:inline-flex;align-items:center;justify-content:center;font-weight:600;
-}
-.btn:hover{border-color:var(--pri);color:var(--pri)}
-.btn-primary{
-  background:linear-gradient(105deg,var(--pri),var(--sec));
-  color:#020617;border:none;
-}
-.kpis{
-  margin-top:34px;
-  display:grid;gap:12px;
-  grid-template-columns:repeat(3,minmax(120px,1fr));
-}
-.kpi{
-  border:1px solid #1e293b;background:var(--panel);
-  border-radius:14px;padding:14px;text-align:center;
-}
-.kpi strong{display:block;font-size:1.45rem;color:var(--ring)}
-.terminal-card{
-  background:#050c1a;
-  border:1px solid var(--border-hi);border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 60px #00000088,0 0 0 1px #00d4ff14;
-}
-.term-bar{
-  display:flex;align-items:center;gap:10px;
-  padding:12px 18px;border-bottom:1px solid var(--border);
-  background:#030810;
-}
-.dot{width:11px;height:11px;border-radius:50%}
-.dot.r{background:#ef4444}.dot.y{background:#f59e0b}.dot.g{background:#22c55e}
-.term-title{font-family:var(--font-mono);font-size:.75rem;color:var(--muted);margin-left:auto}
-.terminal{
-  font-family:var(--font-mono);font-size:.8rem;
-  color:#7dd3fc;padding:20px;
-  min-height:260px;max-height:290px;overflow-y:auto;
-  line-height:1.7;
-}
-.terminal::-webkit-scrollbar{width:4px}
-.terminal::-webkit-scrollbar-track{background:transparent}
-.terminal::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:4px}
-.t-cmd{color:#a5f3fc}.t-ok{color:#22c55e}.t-info{color:#818cf8}.t-warn{color:#f59e0b}
-.dot{width:10px;height:10px;border-radius:50%}
-.red{background:#ef4444}.yellow{background:#f59e0b}.green{background:#22c55e}
-.grid{display:grid;gap:18px}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card{padding:20px;transition:transform .25s ease,border-color .25s ease}
-.card:hover{transform:translateY(-4px);border-color:#38bdf866}
-.card h3{margin-bottom:8px}
-.card p{color:var(--muted)}
-.pill{
-  display:inline-block;padding:7px 11px;border:1px solid #334155;
-  border-radius:999px;font-size:.84rem;color:#cbd5e1;background:#0f172a;
-}
-.stack{display:flex;flex-wrap:wrap;gap:10px}
-.timeline{display:grid;gap:12px}
-.step{
-  padding:14px 16px;border-left:3px solid #334155;background:#0b1226;
-  border-radius:10px;
-}
-.step strong{color:var(--ring)}
-.quote{font-style:italic;color:#dbeafe}
-.contact{
-  text-align:center;
-  background:linear-gradient(145deg,#082f49b3,#1e1b4bb3);
-  border:1px solid #334155;
-  border-radius:20px;
-  padding:34px 24px;
-}
-.contact p{max-width:740px;margin:10px auto 0;color:#cbd5e1}
-.faq details{
-  border:1px solid #1f2937;border-radius:12px;padding:12px 14px;background:#0b1226;
-}
-.avail{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.8rem;font-weight:600;font-family:var(--font-mono);
-  color:var(--ok);background:#18e07a12;border:1px solid #18e07a28;
-  padding:5px 12px;border-radius:999px;margin-bottom:16px;
-}
-.avail-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:pulse-dot 1.4s infinite}
-.faq details+details{margin-top:12px}
-.faq summary{cursor:pointer;font-weight:600}
-.faq p{margin-top:10px;color:var(--muted)}
-footer{
-  border-top:1px solid #1e293b;
-  margin-top:72px;padding:26px 0;
-  color:var(--muted);text-align:center;
-}
-@media (max-width:980px){
-  .hero,.hero-inner{padding-top:64px}
-  .hero-inner,.hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
-  .hero-inner{gap:26px}
-  .terminal-card{max-width:100%}
-  .kpis{grid-template-columns:repeat(3,minmax(95px,1fr))}
-}
-@media (max-width:680px){
-  .container{padding:0 14px}
-  header{position:static}
-  .nav-wrap{
-    min-height:auto;
-    padding:10px 0;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-  }
-  .nav{gap:10px;justify-content:flex-start}
-  .nav a{font-size:.95rem}
-  .eyebrow{font-size:.72rem;letter-spacing:.11em;padding:6px 10px}
-  .cta-row{gap:10px}
-  .btn{width:100%}
-  .kpis{grid-template-columns:1fr 1fr}
-  .kpi strong{font-size:1.2rem}
-  .term-bar{padding:10px 12px}
-  .term-title{font-size:.68rem;max-width:65%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .terminal{
-    font-size:.74rem;
-    line-height:1.55;
-    padding:14px;
-    min-height:220px;
-    max-height:240px;
-  }
-  .pill{font-size:.78rem;padding:6px 9px}
-  section{padding:64px 0}
-}
-@media (max-width:420px){
-  .kpis{grid-template-columns:1fr}
-  .hero h1{font-size:clamp(1.65rem,9vw,2.1rem)}
-  .terminal{min-height:200px;max-height:220px}
-}
-@media (prefers-reduced-motion: reduce){
-  *{scroll-behavior:auto}
-  .card{transition:none}
-}
-</style>
+<link rel="stylesheet" href="css/styles.css">
 
 <script type="application/ld+json">
 {
@@ -346,7 +113,6 @@ footer{
   ]
 }
 </script>
-
 </head>
 <body>
 <div class="grid-bg" aria-hidden="true"></div>
@@ -564,108 +330,6 @@ footer{
   <div class="container">© 2026 Sujeet Rimal • DevOps Engineer • AWS • Kubernetes • CI/CD</div>
 </footer>
 
-<script>
-/* ── TYPING EFFECT ── */
-const roles=[
-  "AWS & Kubernetes Specialist",
-  "CI/CD Automation Engineer",
-  "Cloud Platform Architect",
-  "Terraform & IaC Expert",
-  "Platform Reliability Engineer",
-  "DevSecOps Practitioner"
-];
-let rI=0,cI=0,del=false;
-const el=document.getElementById("typing");
-(function tick(){
-  const t=roles[rI];
-  el.textContent=t.slice(0,cI);
-  if(!del&&cI<t.length)cI++;
-  else if(del&&cI>0)cI--;
-  else{del=!del;if(!del)rI=(rI+1)%roles.length;}
-  setTimeout(tick,del?38:72);
-})();
-
-const logs=[
-  {t:"cmd",v:"$ terraform plan --out=prod.tfplan"},
-  {t:"info",v:"Refreshing state... done."},
-  {t:"ok",v:"Plan: 14 to add, 2 to change, 0 to destroy."},
-  {t:"cmd",v:"$ terraform apply prod.tfplan"},
-  {t:"ok",v:"Apply complete! Resources: 16 added. ✓"},
-  {t:"cmd",v:"$ kubectl get nodes -o wide"},
-  {t:"ok",v:"node-1  Ready  <none>  m5.xlarge  v1.29"},
-  {t:"ok",v:"node-2  Ready  <none>  m5.xlarge  v1.29"},
-  {t:"cmd",v:"$ kubectl get pods -n production"},
-  {t:"ok",v:"api-7dc58-k6n5j     Running  1/1"},
-  {t:"ok",v:"worker-6c65f-rj2tt  Running  1/1"},
-  {t:"ok",v:"cache-84bd9-lx7km   Running  1/1"},
-  {t:"cmd",v:"$ gh workflow run deploy.yml --ref main"},
-  {t:"info",v:"Triggered: build → test → scan → deploy"},
-  {t:"ok",v:"Release #212 deployed. Zero downtime. ✓"},
-  {t:"cmd",v:"$ curl -s metrics.prod/health | jq .uptime"},
-  {t:"ok",v:'"99.97%" — SLO: ✓ all green'}
-];
-const term=document.getElementById("terminal");
-let lI=0;
-(function stream(){
-  if(lI>=logs.length){lI=0;term.innerHTML='';setTimeout(stream,2400);return;}
-  const d=document.createElement("div");
-  d.className="t-"+logs[lI].t;
-  d.textContent=logs[lI].v;
-  term.appendChild(d);
-  term.scrollTop=term.scrollHeight;
-  lI++;setTimeout(stream,lI===1?200:540);
-})();
-
-const canvas=document.getElementById("bg");
-const ctx=canvas.getContext("2d");
-const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-let points=[];
-function fitCanvas(){
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-}
-function initPoints(){
-  const count=Math.max(40,Math.floor(window.innerWidth/24));
-  points=Array.from({length:count},()=>({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    vx:(Math.random()-.5)*0.6,
-    vy:(Math.random()-.5)*0.6
-  }));
-}
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(let i=0;i<points.length;i++){
-    const p=points[i];
-    p.x+=p.vx;
-    p.y+=p.vy;
-    if(p.x<0||p.x>canvas.width)p.vx*=-1;
-    if(p.y<0||p.y>canvas.height)p.vy*=-1;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,1.8,0,Math.PI*2);
-    ctx.fillStyle="#38bdf8";
-    ctx.fill();
-    for(let j=i+1;j<points.length;j++){
-      const q=points[j];
-      const dist=Math.hypot(p.x-q.x,p.y-q.y);
-      if(dist<92){
-        ctx.strokeStyle=`rgba(103,232,249,${1-dist/92})`;
-        ctx.beginPath();
-        ctx.moveTo(p.x,p.y);
-        ctx.lineTo(q.x,q.y);
-        ctx.stroke();
-      }
-    }
-  }
-  if(!reducedMotion)requestAnimationFrame(animate);
-}
-fitCanvas();
-initPoints();
-if(!reducedMotion){animate();}
-window.addEventListener("resize",()=>{
-  fitCanvas();
-  initPoints();
-});
-</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
